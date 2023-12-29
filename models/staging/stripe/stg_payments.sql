@@ -5,5 +5,5 @@ select
 	STATUS as status,
 	AMOUNT/100 as amount,
 	CREATED as created_at
-from raw.stripe.payment
+from {{ source('stripe', 'payment')}}
 	
