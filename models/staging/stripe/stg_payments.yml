@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: stg_payments
+    description: '{{ doc("payments_description") }}'
+    columns:
+      - name: payment_id
+        description: The unique identifier for each payment transaction. This column
+          serves as the primary key for the payment table and can be used to
+          uniquely identify and track individual payments. It is useful for
+          joining with other tables and performing analysis at the transaction
+          level, such as identifying patterns in payment behavior or tracking
+          the status of specific payments over time.
+        tests:
+          - unique
+          - not_null
